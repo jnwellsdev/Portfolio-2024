@@ -1,0 +1,11 @@
+import{ag as i,ad as l,o as m,c as u,b as o,w as t,d as e,a,U as _,p as x,e as b,_ as h}from"./tVMtVdIk.js";import{a as f}from"./BpWcpKw1.js";import{a as g}from"./Diurcmmm.js";const p=s=>(x("data-v-6482afd8"),s=s(),b(),s),w=p(()=>a("h1",null,"Jesse Wells",-1)),v=p(()=>a("p",null,[e("Hey, I am a "),a("span",{class:"c1"},"Front-End Web Developer "),e("with a foundation in "),a("span",{class:"c2"},"JavaScript "),e("and a background in "),a("span",{class:"c3"},"Design"),e(". "),a("br"),e(" I am based in Brooklyn NY with 10+ years of professional experience.")],-1)),C={class:"wrap"},I=i({__name:"test",setup(s){l();const c={root:{style:`--p-card-shadow: 0px 2px 8px -1px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.02), 0px 1px 3px 4px rgba(0,0,0,0.03);
+            height: 100dvh;
+            border: 2px solid #363b4a;
+            margin: 2rem;
+    `}},d={root:{style:`--p-card-shadow: none;
+            border: none;
+            background: transparent;
+            margin: 2rem 2rem 0 2rem;
+            width: 80dvw;
+            max-width: 1280px;
+    `}};return(k,y)=>{const r=g,n=f;return m(),u(_,null,[o(r,{class:"pHeader",pt:d},{content:t(()=>[w,v]),_:1}),o(r,{pt:c},{header:t(()=>[]),title:t(()=>[e("Advanced Card")]),subtitle:t(()=>[e("Card subtitle")]),content:t(()=>[e("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis.")]),footer:t(()=>[a("div",C,[o(n,{label:"Cancel",outlined:""}),o(n,{label:"Save"})])]),_:1})],64)}}}),N=h(I,[["__scopeId","data-v-6482afd8"]]);export{N as default};
