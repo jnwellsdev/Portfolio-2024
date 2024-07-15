@@ -6,22 +6,22 @@ main
 		p(v-html='store.data.intro')
 	section.work
 		template(v-for='card in store.data.work.slice(0,8)')
-			Card(:pt='pCard' @click='handleLink(card)')
+			Card.desk(:pt='pCard' @click='handleLink(card)')
 				template(#content)
 					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
 						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
 		template(v-for='card in store.data.work.slice(8,14)')
-			Card(:pt='pCardSm' @click='handleLink(card)')
+			Card.mob(:pt='pCardSm' @click='handleLink(card)')
 				template(#content)
 					video(width='548' height='1138' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
 						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
 		template(v-for='card in store.data.work.slice(14,16)')
-			Card(:pt='pCardAd' @click='handleLink(card)')
+			Card.ad(:pt='pCardAd' @click='handleLink(card)')
 				template(#content)
 					video(width='972' height='248' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
 						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
 		template(v-for='card in store.data.work.slice(16,20)')
-			Card(:pt='pCard' @click='handleLink(card)')
+			Card.desk(:pt='pCard' @click='handleLink(card)')
 				template(#content)
 					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
 						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
@@ -142,6 +142,7 @@ main
 			padding-right: auto
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
+			max-width: 77%
 	section
 		display: flex
 		justify-content: space-between
@@ -166,5 +167,18 @@ main
 				font-weight: 400
 				width: 100%
 				padding-left: 2rem
+			.p-card
+				transition: border-color 0.35s ease
+			.p-card:hover
+				border-color: var(--p-gray-400) !important
 
+@media (max-width:880px)
+	.desk
+		width: 100% !important
+		margin-right: auto !important
+		margin-left: auto !important
+	.mob
+		width: 80% !important
+		margin-right: auto !important
+		margin-left: auto !important
 </style>

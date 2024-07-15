@@ -432,6 +432,7 @@ const CodeColor = definePreset(Lara, {
 export default {
     preset: CodeColor,
     options: {
-        cssLayer: true
+        cssLayer: true,
+        darkModeSelector: '.is-dark'
     }
 };

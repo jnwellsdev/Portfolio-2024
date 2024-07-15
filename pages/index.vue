@@ -2,9 +2,13 @@
 main 
 	header
 		h1 Jesse Wells
-		p(v-html='store.data.intro')
+		template(v-if='store.mobile')
+			p(v-html='store.data.intro.copy')
+		template(v-else)
+			p.line1(v-html='store.data.intro.line1' :class='{"anim-type": !store.complete}')
+			p.line2(v-html='store.data.intro.line2' :class='{"anim-type": !store.complete}')
 	section.works
-		Card(:pt='pCard')
+		Card(:pt='pCard' @click='handlePassword')
 			template(#header)
 			template(#title)
 				h1 Recent Work
@@ -14,7 +18,7 @@ main
 				p(v-html='store.data.recent' style='')
 			template(#footer)
 				Button(:icon='`${store.allowed ? "pi pi-eye" : "pi pi-lock"}`' size='large' severity='success' v-tooltip.left='{value: `${store.allowed ? "View Work" : "Enter Password" }`}' style='border-width: 3px; text-decoration: none;' rounded outlined @click='handlePassword')
-		Card(:pt='pCard')
+		Card(:pt='pCard' @click='handlePassword')
 			template(#header)
 			template(#title)
 				h1 Previous Work
@@ -30,7 +34,7 @@ main
 				template(#content)
 					Image(:pt='pImage' src='/img/jnwells.jpg' preview)
 			.single 
-				p Currently Available for Small Projects and Consultation 
+				p Currently Available for Positions, Projects, and Consultations.
 				Button(label='jnwellsdev@gmail.com' severity='success' as='a' href='mailto:jnwellsdev@gmail.com' target="_blank")
 				//- Timeline(:value='events' :pt='pTline')
 				//- 	template(#opposite='slotProps')
@@ -59,11 +63,20 @@ main
 <script setup>
 import { use2024Store } from '@/store'
 import { useToast } from 'primevue/usetoast'
+import { anim } from '~/composables/anim.js'
 const store = use2024Store()
 const route = useRoute()
 const router = useRouter()
 const toast = useToast()
 store.allowed && history.pushState('', '', '/2024')
+
+onMounted(() => {
+	anim()
+	store.handleMobile(990)
+	setTimeout(() => {
+		store.setComplete(true)
+	}, 2700)
+})
 
 const handlePassword = () => store.allowed ? router.push('/recent-work') : (store.setDialog(true))
 const handleCorrect = (val) => !val ? store.setCorrect(val) : (
@@ -79,6 +92,8 @@ const showToast = () => {
 const codeFocus = () => document.querySelectorAll('.p-inputotp-input')[0].focus()
 
 const clickResume = (e) => e.target.nodeName !== 'tspan' && e.target.nodeName !== 'svg' && store.setResume(true)
+
+
 
 watch(
 	() => store.code,
@@ -232,6 +247,7 @@ main
 			padding-right: auto
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
+			max-width: 77%
 	section
 		display: flex
 		justify-content: space-between
@@ -239,6 +255,11 @@ main
 		@media (max-width: 880px)
 			flex-flow: column
 			align-items: center
+		.p-card
+			transition: border-color 0.35s ease
+			cursor: pointer
+		.p-card:hover
+			border-color: var(--p-gray-400) !important
 		.p-card
 			width: 49%
 			// padding: 1.5rem
@@ -265,7 +286,7 @@ main
 				.p-card
 					width: 100%
 					@media (max-width: 880px)
-						width: 38%
+						width: 44%
 						min-width: 250px
 				.single
 					@media (max-width: 880px)
@@ -311,5 +332,16 @@ main
 							border-width: 30px
 							top: calc(50% - 15px)
 	footer
-		margin-bottom: 4rem
+		margin-bottom: 6.5rem
+.anim-type
+	position: relative
+	border-right: 2px solid rgba(255,255,255,.75)
+	white-space: nowrap
+	overflow: hidden
+	-webkit-box-sizing:content-box
+	box-sizing:content-box
+.line1
+	margin-bottom: 0
+.line2
+	margin-top: 0
 </style>

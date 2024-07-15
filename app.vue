@@ -2,6 +2,10 @@
 #app
 	NuxtPage
 </template>
+<script>
+const el = document.querySelector('html')
+el.classList.toggle('is-dark')
+</script>
 <style lang="sass">
 @import 'primeicons/primeicons.css'
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lilita+One&family=Lobster&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap'
@@ -23,7 +27,8 @@ $code-b: #9aedeb
 $code-black: #202430
 $code-grey: #2b303f
 $code-white: #eff0eb
-
+svg
+	width: 100%
 :root
 	--p-mask-background: rgb(12 12 22 / 88%)
 body
@@ -46,6 +51,8 @@ a
 	@media (max-width: 880px)
 		height: auto
 		padding-top: 4cqh
+	background: transparent
+	
 // teleport
 .p-tooltip-arrow
 	display: none
