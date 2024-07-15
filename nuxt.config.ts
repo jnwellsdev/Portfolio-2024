@@ -1,6 +1,7 @@
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: false },
   modules: [
     '@primevue/nuxt-module',
