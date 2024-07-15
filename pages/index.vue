@@ -231,6 +231,8 @@ main
 	header
 		padding: 0 1.5rem 1rem 3rem
 		margin-top: 2.25rem
+		@media (max-width: 550px)
+			padding: 0 1.75rem 1rem 2.25rem
 		h1
 			margin-top: 0
 			font-family: 'Lilita One', sans-serif
@@ -248,6 +250,8 @@ main
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
 			max-width: 77%
+			@media (max-width: 550px)
+				max-width: 100%
 	section
 		display: flex
 		justify-content: space-between
@@ -338,8 +342,8 @@ main
 	border-right: 2px solid rgba(255,255,255,.75)
 	white-space: nowrap
 	overflow: hidden
-	-webkit-box-sizing:content-box
-	box-sizing:content-box
+	-webkit-box-sizing: content-box
+	box-sizing: content-box
 .line1
 	margin-bottom: 0
 .line2
