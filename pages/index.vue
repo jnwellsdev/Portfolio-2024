@@ -227,6 +227,9 @@ main
 			text-underline-offset: 10px
 			color: var(--p-red-500)
 			text-shadow: 0px 0px 22px rgb(232 50 67 / 40%)
+			width: 30%
+			min-width: 300px
+			padding-right: auto
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
 	section

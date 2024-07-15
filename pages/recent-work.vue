@@ -5,37 +5,35 @@ main
 		h1(@click='router.push("/")') Jesse Wells
 		p(v-html='store.data.intro')
 	section.work
-		template(v-for='card in ["color1","win1","acro1","back9"]')
-			Card(:pt='pCard')
+		template(v-for='card in store.data.work.slice(0,8)')
+			Card(:pt='pCard' @click='handleLink(card)')
 				template(#content)
 					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/vid/${card}.webm`' type='video/webm')
-		template(v-for='card in ["honor1","spin1","risk1","dex1"]')
-			Card(:pt='pCard')
-				template(#content)
-					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/vid/${card}.webm`' type='video/webm')
-		template(v-for='card in ["big2","golf1","snow1","sing2","move1","cut1"]')
-			Card(:pt='pCardSm')
+						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+		template(v-for='card in store.data.work.slice(8,14)')
+			Card(:pt='pCardSm' @click='handleLink(card)')
 				template(#content)
 					video(width='548' height='1138' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/vid/${card}.webm`' type='video/webm')
-		template(v-for='card in ["abc1", "abc2"]')
-			Card(:pt='pCardAd')
+						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+		template(v-for='card in store.data.work.slice(14,16)')
+			Card(:pt='pCardAd' @click='handleLink(card)')
 				template(#content)
 					video(width='972' height='248' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/vid/${card}.webm`' type='video/webm')
-		template(v-for='card in ["balco1", "bacopd1", "rebate1", "pplus1"]')
-			Card(:pt='pCard')
+						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+		template(v-for='card in store.data.work.slice(16,20)')
+			Card(:pt='pCard' @click='handleLink(card)')
 				template(#content)
 					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/vid/${card}.webm`' type='video/webm')
+						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
 </template>
 
 <script setup>
 import { use2024Store } from '@/store'
 const store = use2024Store()
 const router = useRouter()
+
+const handleLink = (val) => window.open(`https://${val.link}`, '_blank')
+
 const pCard = {
 	root: {
 		style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
@@ -98,7 +96,7 @@ const pCardAd = {
 						margin: 2.25rem 0 0 0;
 						background: rgb(43 48 63 / 35%);
 						background-image: url(/img/otis-redding2.png);
-						width: 98%;
+						width: 100%;
 		`
 	},
 	title: {
@@ -152,8 +150,7 @@ main
 			flex-flow: column
 			align-items: center
 		.p-card
-			width: 49%
-			// padding: 1.5rem
+			cursor: pointer
 			@media (max-width: 880px)
 				width: 96%
 				margin-bottom: 0 !important

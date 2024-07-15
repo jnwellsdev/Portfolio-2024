@@ -1,8 +1,7 @@
-import Lara from '@primevue/themes/aura';
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 
 export default defineNuxtConfig({
-  // devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@primevue/nuxt-module',
     '@pinia/nuxt'
