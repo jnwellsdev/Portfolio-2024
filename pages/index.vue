@@ -2,11 +2,9 @@
 main 
 	header
 		h1 Jesse Wells
-		template(v-if='store.mobile')
-			p(v-html='store.data.intro.copy')
-		template(v-else)
-			p.line1(v-html='store.data.intro.line1' :class='{"anim-type": !store.complete}')
-			p.line2(v-html='store.data.intro.line2' :class='{"anim-type": !store.complete}')
+		.anim-intro
+			span.anim-text
+			span.anim-cursor |
 	section.works
 		Card(:pt='pCard' @click='handlePassword')
 			template(#header)
@@ -71,7 +69,7 @@ const toast = useToast()
 store.allowed && history.pushState('', '', '/2024')
 
 onMounted(() => {
-	anim()
+	anim(store.data.intro)
 	store.handleMobile(990)
 	setTimeout(() => {
 		store.setComplete(true)
@@ -229,10 +227,10 @@ main
 	max-width: 1280px
 	container: layout / inline-size
 	header
-		padding: 0 1.5rem 1rem 3rem
+		padding: 0 1.5rem 0 3rem
 		margin-top: 2.25rem
 		@media (max-width: 550px)
-			padding: 0 1.75rem 1rem 2.25rem
+			padding: 0 1.75rem 0 2.25rem
 		h1
 			margin-top: 0
 			font-family: 'Lilita One', sans-serif
@@ -247,6 +245,13 @@ main
 			width: 30%
 			min-width: 300px
 			padding-right: auto
+		.anim-intro
+			max-width: 77%
+			height: 84px
+			@media (max-width: 550px)
+				max-width: 100%
+			span
+				text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
 			max-width: 77%
@@ -337,15 +342,7 @@ main
 							top: calc(50% - 15px)
 	footer
 		margin-bottom: 6.5rem
-.anim-type
-	position: relative
-	border-right: 2px solid rgba(255,255,255,.75)
-	white-space: nowrap
-	overflow: hidden
-	-webkit-box-sizing: content-box
-	box-sizing: content-box
-.line1
-	margin-bottom: 0
-.line2
-	margin-top: 0
+.anim-cursor
+	display: inline-block
+	padding-left: 1.5rem
 </style>
