@@ -105,6 +105,8 @@ a
 		margin-bottom: -18px
 .p-toast
 	width: auto
+	@media (max-width: 550px)
+		width: calc(100% - 40px)
 	.p-toast-message
 		margin: 0
 		.p-toast-message-content

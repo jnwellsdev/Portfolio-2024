@@ -69,11 +69,11 @@ const toast = useToast()
 store.allowed && history.pushState('', '', '/2024')
 
 onMounted(() => {
-	anim(store.data.intro)
+	anim(store.data.intro, store.complete)
 	store.handleMobile(990)
 	setTimeout(() => {
 		store.setComplete(true)
-	}, 2700)
+	}, 6000)
 })
 
 const handlePassword = () => store.allowed ? router.push('/recent-work') : (store.setDialog(true))

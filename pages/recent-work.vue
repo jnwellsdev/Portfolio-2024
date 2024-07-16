@@ -143,6 +143,13 @@ main
 		p
 			text-shadow: 0px 0px 16px rgb(130 140 180 / 80%)
 			max-width: 77%
+			height: 84px
+			@media (max-width: 550px)
+				max-width: 100%
+				height: 114px
+			@media (max-width: 400px)
+				max-width: 100%
+				height: 134px
 	section
 		display: flex
 		justify-content: space-between
