@@ -16,7 +16,7 @@ main
 				p(v-html='store.data.recent' style='')
 			template(#footer)
 				Button(:icon='`${store.allowed ? "pi pi-eye" : "pi pi-lock"}`' size='large' severity='success' v-tooltip.left='{value: `${store.allowed ? "View Work" : "Enter Password" }`}' style='border-width: 3px; text-decoration: none;' rounded outlined @click='handlePassword')
-		Card(:pt='pCard' @click='handlePassword')
+		Card(:pt='pCard' @click='handleLink("jessenwells.com/portfolio")')
 			template(#header)
 			template(#title)
 				h1 Previous Work
@@ -89,9 +89,10 @@ const showToast = () => {
 
 const codeFocus = () => document.querySelectorAll('.p-inputotp-input')[0].focus()
 
-const clickResume = (e) => e.target.nodeName !== 'tspan' && e.target.nodeName !== 'svg' && store.setResume(true)
+// const clickResume = (e) => e.target.nodeName !== 'tspan' && e.target.nodeName !== 'svg' && store.setResume(true)
+const clickResume = () => store.setResume(true)
 
-
+const handleLink = (val) => window.open(`http://${val}`, '_blank')
 
 watch(
 	() => store.code,
@@ -202,7 +203,7 @@ const pImage = {
 		style: `max-width: 100%; height: auto;outline: 6px solid var(--p-gray-500);border-radius: 8px;`
 	},
 	previewMask: {
-		style: `background: rgb(243 239 121 / 7%);`
+		style: `background: rgb(243 239 121 / 1%);`
 	},
 	previewIcon: {
 		style: `color: var(--p-blue-500);width:15%;height:15%; opacity: 0;`

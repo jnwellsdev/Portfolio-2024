@@ -5,8 +5,9 @@ main
         h1(@click='router.push("/")') Jesse Wells
         p(v-html='store.data.intro')
     section.work
-        Card.desk(:pt='pCard' @click='handleLink(card)')
-            template(#content) x_x
+        Card.desk(:pt='pCard' style='pointer-events:none;')
+            template(#content) 
+                p(style='padding-left:1rem;') x_x
                 
 </template>
 

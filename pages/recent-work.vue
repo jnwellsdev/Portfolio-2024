@@ -1,30 +1,36 @@
 <template lang='pug'>
 main 
-	header
-		nuxtLink(to='/')
-		h1(@click='router.push("/")') Jesse Wells
-		p(v-html='store.data.intro')
-	section.work
-		template(v-for='card in store.data.work.slice(0,8)')
-			Card.desk(:pt='pCard' @click='handleLink(card)')
-				template(#content)
-					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
-		template(v-for='card in store.data.work.slice(8,14)')
-			Card.mob(:pt='pCardSm' @click='handleLink(card)')
-				template(#content)
-					video(width='548' height='1138' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
-		template(v-for='card in store.data.work.slice(14,16)')
-			Card.ad(:pt='pCardAd' @click='handleLink(card)')
-				template(#content)
-					video(width='972' height='248' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
-		template(v-for='card in store.data.work.slice(16,20)')
-			Card.desk(:pt='pCard' @click='handleLink(card)')
-				template(#content)
-					video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
-						source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+	template(v-if='store.allowed')
+		header
+			nuxtLink(to='/')
+			h1(@click='router.push("/")') Jesse Wells
+			p(v-html='store.data.intro')
+		section.work
+			template(v-for='card in store.data.work.slice(0,8)')
+				Card.desk(:pt='pCard' @click='handleLink(card)')
+					template(#content)
+						video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
+							source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+			template(v-for='card in store.data.work.slice(8,14)')
+				Card.mob(:pt='pCardSm' @click='handleLink(card)')
+					template(#content)
+						video(width='548' height='1138' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
+							source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+			template(v-for='card in store.data.work.slice(14,16)')
+				Card.ad(:pt='pCardAd' @click='handleLink(card)')
+					template(#content)
+						video(width='972' height='248' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
+							source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+			template(v-for='card in store.data.work.slice(16,20)')
+				Card.desk(:pt='pCard' @click='handleLink(card)')
+					template(#content)
+						video(width='1184' height='660' muted autoplay loop style='width: 100%; height: 100%;border-radius: 10px;')
+							source(:src='`/video/demo${card.id}.webm`' type='video/webm')
+	template(v-else)
+		header
+			p(style='text-align:center;max-width:100%') you do not have required permissions to view this page
+			p(@click='router.push("/")' style='text-align:center;max-width:100%;color: var(--p-yellow-500);cursor:pointer;text-decoration:underline;') RETURN
+		section
 </template>
 
 <script setup>
