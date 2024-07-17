@@ -3,6 +3,12 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: false },
+  app: {
+    head: {
+      title: 'Jesse N Wells | Web Developer',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   modules: [
     '@primevue/nuxt-module',
     '@pinia/nuxt'

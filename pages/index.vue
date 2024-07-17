@@ -32,7 +32,7 @@ main
 				template(#content)
 					Image(:pt='pImage' src='/img/jnwells.jpg' preview)
 			.single 
-				p Currently Available for Positions, Projects, and Consultations.
+				p Currently Available for Positions, Projects, and Consultancies.
 				Button(label='jnwellsdev@gmail.com' severity='success' as='a' href='mailto:jnwellsdev@gmail.com' target="_blank")
 				//- Timeline(:value='events' :pt='pTline')
 				//- 	template(#opposite='slotProps')

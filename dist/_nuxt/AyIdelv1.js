@@ -1,0 +1,1 @@
+import{u as t}from"./RMe0jrz8.js";import{u as r}from"./DbyiskOS.js";const c={__name:"2024",setup(s){const e=r();console.log(e.allowed);const o=t();return e.setAllowed(!0),o.push({path:"/"}),(u,a)=>null}};export{c as default};
