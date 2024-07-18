@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
     head: {
-      title: 'Jesse N Wells | Web Developer',
+      title: 'Jesse Wells | Web Developer',
       viewport: 'width=device-width, initial-scale=1',
     }
   },
