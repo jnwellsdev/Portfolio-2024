@@ -72,6 +72,10 @@ a
 	color: var(--p-yellow-400)
 	padding: 10px 16px
 	width: auto
+#pv_id_6_tooltip .p-tooltip-text
+	color: var(--p-green-400)
+	padding: 10px 16px
+	width: auto
 .p-inputotp
 	gap: 1
 .p-inputotp input
@@ -103,6 +107,10 @@ a
 		padding-left: 0
 		padding-right: 0
 		margin-bottom: -18px
+.p-dialog-close-button
+	border: none
+	box-shadow: none
+	background: transparent
 .p-toast
 	width: auto
 	@media (max-width: 550px)

@@ -43,8 +43,9 @@ main
 			.buttons
 				Divider(type='dotted')
 				Button(icon="pi pi-search" size='large' severity='info' v-tooltip.top='{value: "View Resume"}' class='info' style='border-width: 3px; text-decoration: none;' target="_blank" @click='store.setResume' rounded outlined )
-				Button(icon="pi pi-print" size='large' severity='warn' v-tooltip.top='{value: "PDF Resume"}' style='border-width: 3px; text-decoration: none;' as='a' href='/img/jnwells-resume-2024.pdf' target="_blank" rounded outlined )
-				Button(icon="pi pi-save" size='large' severity='help' v-tooltip.top='{value: "Word Resume"}' style='border-width: 3px; text-decoration: none;' as='a' href='/img/jnwells-resume-2024.docx' rounded outlined )
+				Button(icon="pi pi-file" size='large' severity='warn' v-tooltip.top='{value: "Plain Text"}' style='border-width: 3px; text-decoration: none;' as='a' href='/img/jnwells-resume-2024.txt' rounded outlined )
+				Button(icon="pi pi-print" size='large' severity='help' v-tooltip.top='{value: "PDF Resume"}' style='border-width: 3px; text-decoration: none;' as='a' href='/img/jnwells-resume-2024.pdf' target="_blank" rounded outlined )
+				Button(icon="pi pi-save" size='large' severity='success' v-tooltip.top='{value: "Word Resume"}' style='border-width: 3px; text-decoration: none;' as='a' href='/img/jnwells-resume-2024.docx' rounded outlined )
 			Card(:pt='pCardResume' @click='clickResume')
 				template(#content)
 					Resume
@@ -231,7 +232,8 @@ main
 		padding: 0 1.5rem 0 3rem
 		margin-top: 2.25rem
 		@media (max-width: 550px)
-			padding: 0 1.75rem 0 2.25rem
+			margin-top: 0.5rem
+			padding: 0 1.75rem 0 1.75rem
 		h1
 			margin-top: 0
 			font-family: 'Lilita One', sans-serif
@@ -269,6 +271,8 @@ main
 		@media (max-width: 880px)
 			flex-flow: column
 			align-items: center
+		@media (max-width: 550px)
+			padding: 0 1rem 1rem 1rem
 		.p-card
 			transition: border-color 0.35s ease
 			cursor: pointer
@@ -329,17 +333,17 @@ main
 					justify-content: space-between
 					width: 100%
 					margin: 0 3% 3rem 0
-					@media (max-width: 580px)
+					@media (max-width: 680px)
 						width: 84%
 						margin: 0.5rem 8% 3rem 8%
 					.p-divider
-						width: 74%
+						width: 68%
 						margin: 0 1% 0 2%
-						@media (max-width: 880px)
-							width: 68%
+						@media (max-width: 1080px)
+							width: 60%
 							margin: 0 1%
-						@media (max-width: 580px)
-							width: 48%
+						@media (max-width: 680px)
+							width: 40%
 							margin: 0 1% 0 0
 						&:before
 							border-color: rgb(37 41 54 / 50%)

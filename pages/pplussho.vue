@@ -1,13 +1,17 @@
 <template lang='pug'>
 main 
-    header
-        nuxtLink(to='/')
-        h1(@click='router.push("/")') Jesse Wells
-        p(v-html='store.data.intro')
-    section.work
-        Card.desk(:pt='pCard' style='pointer-events:none;')
-            template(#content) 
-                p(style='padding-left:1rem;') x_x
+	header
+		nuxtLink(to='/')
+		h1(@click='router.push("/")') Jesse Wells
+		p(v-html='store.data.intro')
+	section.work
+		Card.desk(:pt='pCard')
+			template(#content)
+				Image(:pt='pImage' :src='`/img/pplus-${index}.png`' preview)
+		template(v-for='index in 5')
+			Card.desk(:pt='pCard')
+				template(#content)
+					Image(:pt='pImage' :src='`/img/pplus-${index + 1}.png`' preview)
                 
 </template>
 
@@ -19,8 +23,8 @@ const router = useRouter()
 const handleLink = (val) => window.open(`https://${val.link}`, '_blank')
 
 const pCard = {
-    root: {
-        style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
+	root: {
+		style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
 				border: 4px solid rgb(43 48 63 / 90%);
 				outline: 2px solid rgb(50 60 78 / 58%);
 				margin: 2.5rem 0 0 0;
@@ -28,26 +32,26 @@ const pCard = {
 				background-image: url(/img/otis-redding2.png);
 				width: 100%;
 		`
-    },
-    title: {
-        style: ` margin: 0; color: var(--p-orange-500);`
-    },
-    subtitle: {
-        style: `color: var(--p-blue-500); font-style: italic;`
-    },
-    body: {
-        style: `flex: 1; padding: 0.75rem;`
-    },
-    content: {
-        style: `flex: 1`
-    },
-    footer: {
-        style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
-    }
+	},
+	title: {
+		style: ` margin: 0; color: var(--p-orange-500);`
+	},
+	subtitle: {
+		style: `color: var(--p-blue-500); font-style: italic;`
+	},
+	body: {
+		style: `flex: 1; padding: 0.75rem;`
+	},
+	content: {
+		style: `flex: 1`
+	},
+	footer: {
+		style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
+	}
 }
 const pCardSm = {
-    root: {
-        style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
+	root: {
+		style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
 						border: 4px solid rgb(43 48 63 / 90%);
 						outline: 2px solid rgb(50 60 78 / 58%);
 						margin: 2.25rem 0 0 0;
@@ -55,26 +59,26 @@ const pCardSm = {
 						background-image: url(/img/otis-redding2.png);
 						width: 30.75%;
 		`
-    },
-    title: {
-        style: ` margin: 0; color: var(--p-orange-500);`
-    },
-    subtitle: {
-        style: `color: var(--p-blue-500); font-style: italic;`
-    },
-    body: {
-        style: `flex: 1; padding: 0.75rem;`
-    },
-    content: {
-        style: `flex: 1`
-    },
-    footer: {
-        style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
-    }
+	},
+	title: {
+		style: ` margin: 0; color: var(--p-orange-500);`
+	},
+	subtitle: {
+		style: `color: var(--p-blue-500); font-style: italic;`
+	},
+	body: {
+		style: `flex: 1; padding: 0.75rem;`
+	},
+	content: {
+		style: `flex: 1`
+	},
+	footer: {
+		style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
+	}
 }
 const pCardAd = {
-    root: {
-        style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
+	root: {
+		style: `--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
 						border: 4px solid rgb(43 48 63 / 90%);
 						outline: 2px solid rgb(50 60 78 / 58%);
 						margin: 2.25rem 0 0 0;
@@ -82,22 +86,33 @@ const pCardAd = {
 						background-image: url(/img/otis-redding2.png);
 						width: 100%;
 		`
-    },
-    title: {
-        style: ` margin: 0; color: var(--p-orange-500);`
-    },
-    subtitle: {
-        style: `color: var(--p-blue-500); font-style: italic;`
-    },
-    body: {
-        style: `flex: 1; padding: 0.75rem;`
-    },
-    content: {
-        style: `flex: 1`
-    },
-    footer: {
-        style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
-    }
+	},
+	title: {
+		style: ` margin: 0; color: var(--p-orange-500);`
+	},
+	subtitle: {
+		style: `color: var(--p-blue-500); font-style: italic;`
+	},
+	body: {
+		style: `flex: 1; padding: 0.75rem;`
+	},
+	content: {
+		style: `flex: 1`
+	},
+	footer: {
+		style: `display: flex;justify-content:flex-end;padding-padding-top: 2rem`
+	}
+}
+const pImage = {
+	image: {
+		style: `max-width: 100%; height: auto;`
+	},
+	previewMask: {
+		style: `background: rgb(243 239 121 / 1%);`
+	},
+	previewIcon: {
+		style: `color: var(--p-blue-500);width:15%;height:15%; opacity: 0;`
+	},
 }
 </script>
 
@@ -151,6 +166,10 @@ main
 				margin: 0
 			p
 				margin: 0
+			.p-image
+				img
+					width: 100%
+					height: auto
 		&.work
 			flex-flow: row wrap
 			margin-bottom: 8rem
@@ -162,7 +181,6 @@ main
 				transition: border-color 0.35s ease
 			.p-card:hover
 				border-color: var(--p-gray-400) !important
-
 @media (max-width:880px)
 	.desk
 		width: 100% !important

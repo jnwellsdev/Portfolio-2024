@@ -1,0 +1,62 @@
+
+Jesse Wells
+Front-End Developer
+Brooklyn, NY
+jnwellsdev@gmail.com
+347-243-5863
+http://jnwells.dev/2024
+
+Hey, I am a Front-End Web Developer with a foundation in JavaScript and a background in Design. I am based in Brooklyn NY with 10+ years of professional experience in full stack development and digital design.
+
+WORK EXPERIENCE
+
+Renegade Communications: Front End Developer (2020 - Present)
+
+- Proficiently utilized cutting-edge technologies to deliver dynamic interactive and visually appealing user experiences for clients including Comcast NBC Showtime and Hulu.
+- Created tailored solutions and interactive games to boost employee engagement and training effectiveness.
+- Spearheaded the development of a custom in-house tech solution for client site generation and administration.
+- Excelled in a fast-paced agency environment consistently delivering high-quality results under tight deadlines.
+
+Modells Sporting Goods: Front End Developer (2014 - 2020)
+
+- Assisted in all areas to redesign build and relaunch a new Ecommerce site for a nationwide retailer.
+- Developed automated and streamlined workflows for static pages and emails.
+
+Mammoth Advertising: HTML5 Developer (2014 - 2015)
+
+- Created interactive animated advertisements for web and display for top media corporations including ABC CBS FX and Hulu.
+- Managed the transition from Flash to HTML5 animation.
+
+Everyday Media: Digital Designer (2013 - 2015)
+
+- Designed and managed Facebook advertisements and social media campaigns.
+- Designed print ads web ads and HTML emails.
+
+F5 Interactive Agency: Front End Designer & Developer (2012 - 2015)
+
+- Developed various projects involving front-end templates complex UIs interactive data infographics and large-scale animations.
+
+EDUCATION
+
+Fashion Institute of Technology: BFA Illustration (2005 - 2009)
+
+SKILLS
+
+- HTML5/CSS (5/5)
+- JAVASCRIPT/ES6 (5/5)
+- TYPESCRIPT (5/5)
+- VUE (5/5)
+- VITE (5/5)
+- REACT (5/5)
+- REACT NATIVE (5/5)
+- NODE JS (5/5)
+- GSAP (5/5)
+- SASS/SCSS (5/5)
+- ADOBE CC (5/5)
+- FIGMA/SKETCH (5/5)
+- NATIVESCRIPT (4/5)
+- TAILWIND/BS (4/5)
+- WORDPRESS (4/5)
+- PHP/MYSQL (3/5)
+- SVELTE (3/5)
+- SOLID (3/5)
