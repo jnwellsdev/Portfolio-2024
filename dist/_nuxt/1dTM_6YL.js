@@ -1,0 +1,8 @@
+import{_}from"./DuIYZncg.js";import{_ as x,u as b,c as i,a as t,b as e,a7 as l,w as c,o as d,P as f,W as h}from"./Cy_EAita.js";import{a as y}from"./usAOuagy.js";import{b as k}from"./Dqp_Z5ow.js";import{u as w}from"./DuK8Nel5.js";import"./D1kjChk-.js";const v=["innerHTML"],C={class:"work"},I={__name:"pplussho",setup(L){const u=w(),m=b(),o={root:{style:`--p-card-shadow: 0px 4px 20px -6px rgba(0,0,0,0.025), 0px 3px 20px 6px rgba(0,0,0,0.025), 0px 4px 20px 6px rgba(0,0,0,0.025);
+				border: 4px solid rgb(43 48 63 / 90%);
+				outline: 2px solid rgb(50 60 78 / 58%);
+				margin: 2.5rem 0 0 0;
+				background: rgb(43 48 63 / 35%);
+				background-image: url(/img/otis-redding2.png);
+				width: 100%;
+		`},title:{style:" margin: 0; color: var(--p-orange-500);"},subtitle:{style:"color: var(--p-blue-500); font-style: italic;"},body:{style:"flex: 1; padding: 0.75rem;"},content:{style:"flex: 1"},footer:{style:"display: flex;justify-content:flex-end;padding-padding-top: 2rem"}},s={image:{style:"max-width: 100%; height: auto;"},previewMask:{style:"background: rgb(243 239 121 / 1%);"},previewIcon:{style:"color: var(--p-blue-500);width:15%;height:15%; opacity: 0;"}};return(B,r)=>{const g=_,n=k,p=y;return d(),i("main",null,[t("header",null,[e(g,{to:"/"}),t("h1",{onClick:r[0]||(r[0]=a=>l(m).push("/"))},"Jesse Wells"),t("p",{innerHTML:l(u).data.intro},null,8,v)]),t("section",C,[e(p,{class:"desk",pt:o},{content:c(()=>[e(n,{pt:s,src:"/img/pplus-1.png",preview:""})]),_:1}),e(p,{class:"desk",pt:o},{content:c(()=>[(d(),i(f,null,h(4,a=>e(n,{pt:s,src:`/img/pplus-${a+1}.png`,preview:""},null,8,["src"])),64))]),_:1})])])}}},W=x(I,[["__scopeId","data-v-12d695e0"]]);export{W as default};

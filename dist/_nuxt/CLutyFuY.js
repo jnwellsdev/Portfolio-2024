@@ -1,1 +1,0 @@
-import{u as t}from"./BawcDiuc.js";import{u as r}from"./DIvFYR7P.js";const c={__name:"2024",setup(s){const e=r();console.log(e.allowed);const o=t();return e.setAllowed(!0),o.push({path:"/"}),(u,a)=>null}};export{c as default};

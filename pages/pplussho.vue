@@ -7,11 +7,10 @@ main
 	section.work
 		Card.desk(:pt='pCard')
 			template(#content)
-				Image(:pt='pImage' :src='`/img/pplus-${index}.png`' preview)
-		template(v-for='index in 5')
-			Card.desk(:pt='pCard')
-				template(#content)
-					Image(:pt='pImage' :src='`/img/pplus-${index + 1}.png`' preview)
+				Image(:pt='pImage' :src='`/img/pplus-1.png`' preview)
+		Card.desk(:pt='pCard')
+			template(#content)
+				Image(v-for='index in 4' :pt='pImage' :src='`/img/pplus-${index + 1}.png`' preview)
                 
 </template>
 
