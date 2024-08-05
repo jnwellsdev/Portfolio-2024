@@ -336,6 +336,9 @@ main
 					@media (max-width: 680px)
 						width: 84%
 						margin: 0.5rem 8% 3rem 8%
+					@media (max-width: 500px)
+						width: 64%
+						margin: 0.5rem 18% 3rem 18%
 					.p-divider
 						width: 68%
 						margin: 0 1% 0 2%
@@ -345,6 +348,8 @@ main
 						@media (max-width: 680px)
 							width: 40%
 							margin: 0 1% 0 0
+						@media (max-width: 500px)
+							display: none
 						&:before
 							border-color: rgb(37 41 54 / 50%)
 							border-width: 30px
