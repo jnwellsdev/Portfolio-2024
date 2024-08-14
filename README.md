@@ -1,7 +1,7 @@
 ## Portfolio 2024
 
 
-quick updated portfolio using modern frameworks and packages
+quick updated portfolio using current frameworks and packages
 ##
 **Vue.js 3** [[docs]](https://vuejs.org/)
 
